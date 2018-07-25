@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Property-Search</title>
+</head>
+<body>
+    <form method="POST" action="https://request-inspector.glitch.me">
+        <h1>Find your new home today!</h1>
+        <div>
+            <Label>Property Type</Label>
+            <select name="Property Type">
+                <option value="Ranch Style">Ranch Style</option>
+                <option value="Town Home">Town Home</option>
+                <option value="Two Story">Two Story</option>
+                <option value="Large Land">Large Land</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="square footage">Square Footage</label>
+            <input id="square footage" type="number" name="square footage">
+        </div>
+        <br>
+        <div>
+            <label for="number of bedrooms">Number of Bedrooms</label>
+            <input id="number of bedrooms" type="number" name="number of bedrooms"/>
+        </div>
+        <br>
+        <div>
+            <label for="number of bathrooms">Number of Bathrooms</label>
+            <input id="number of bathrooms" type="numbers" name="number of bathrooms"/>
+        </div>
+        <br>
+        <div>
+            <label for="Price Range">Price Range</label>
+            <select name="Price Range" id="Price Range">
+                <option value="50-60">50-60k</option>
+                <option value="70-80">70-80k</option>
+                <option value="90-100">90-100k</option>
+                <option value="100-125">100-125k</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="zip code">Enter Zipcode</label>
+            <input id="zip code" type="search">
+
+        </div>
+        <input type="submit" value="Search Now!"/>
+
+
+    </form>
+
+</body>
+</html>
