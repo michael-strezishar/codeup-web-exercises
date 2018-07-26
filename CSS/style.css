@@ -1,0 +1,46 @@
+/*
+my first
+stylesheet
+*/
+
+header {
+    text-align: center;
+    color: darkblue;
+    text-decoration: underline;
+}
+
+h2 {
+    color: blue;
+    text-decoration: underline;
+}
+
+body {
+    background-image: url("../img/clouds.jpg");
+    background-size: 100% 100%;
+}
+
+#vis {
+    list-style-type: square;
+}
+
+#val {
+    list-style-type: square;
+}
+
+main {
+    font-family: Optima, serif;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+a:hover {
+    color: red;
+}
