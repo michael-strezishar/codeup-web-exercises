@@ -15,24 +15,24 @@ body, html {
 }
 .message-info {
     size: 50em;
-    background-color: lightblue;
+    background-color: #cbdcff;
 
 }
 
  .message-success {
-    background-color: #cbffcd;
+    background-color: #c6f6d9;
 
 
 }
 
  .message-warning {
-     background-color: yellow;
+     background-color: #fbfec3;
 
 
  }
 
  .message-error {
-     background-color: lightpink;
+     background-color: #ffd1d6;
 
 
  }
