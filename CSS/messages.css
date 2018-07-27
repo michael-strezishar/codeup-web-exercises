@@ -10,29 +10,34 @@ body, html {
     width: 95%;
     border: .5em;
     margin: .5em auto;
-    border-radius: .5em;
-    height: 2em;
+    border-radius: .3em;
+    height: 1.5em;
+    padding: .3em;
+
 }
 .message-info {
-    size: 50em;
     background-color: #cbdcff;
+    color: #6148b2;
 
 }
 
  .message-success {
     background-color: #c6f6d9;
+     color: #036a28;
 
 
 }
 
  .message-warning {
      background-color: #fbfec3;
+     color: #8e7d06;
 
 
  }
 
  .message-error {
      background-color: #ffd1d6;
+     color: #a73f51;
 
 
  }
