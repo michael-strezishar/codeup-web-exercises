@@ -1,0 +1,81 @@
+@media screen and (max-width:700px) {
+
+    div.alert-info {
+        background-color: #c0ffff;
+        text-align: center;
+        padding: .6em;
+        border: .2em solid #cccece;
+    }
+
+    .alert-info > a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .nav-links {
+        list-style-type: none;
+        border: .1em black;
+        padding: 0em;
+        margin: auto;
+        width: 98%;
+
+    }
+
+    .nav-links > li {
+        text-align: center;
+        margin: .3em 0em;
+        /*border: .1em black;*/
+        padding: .5em 1em;
+        list-style: none;
+        background-color: lightgrey;
+
+    }
+
+    h1 {
+        text-align: center;
+        font-family: "Andale Mono";
+    }
+}
+@media screen and (min-width:700px) {
+
+
+
+    .nav-links > li {
+        display: inline-block;
+        list-style-type: none;
+        float: right;
+        padding: .5em;
+    }
+
+    .alert-info {
+        display: none;
+    }
+
+    h1 {
+        float: left;
+        margin-top: .2em;
+    }
+
+    .main {
+        float: left;
+        width: 70%
+    }
+}
+    body {
+        font-family: sans-serif;
+    }
+    .main {
+    font-family: Avenir;
+    }
+    .sub-section {
+    font-family: Avenir;
+    font-style: italic;
+
+    }
+    img {
+         width: 100%;
+
+     }
+
+
+
