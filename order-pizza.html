@@ -2,83 +2,159 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Order-Pizza</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS/custom.css">
 </head>
 <body>
-    <div class="navbar navbar-expand-lg navbar-light bg-light">
-        <ul class="list-unstyled navbar bd-navbar-nav navbar-expand-lg navbar-light bg-light">
-            <li class="navbar-brand" href="">Pizza World</li>
-            <li class="nav-item bg-info" href="">Order Online</li>
-            <li class="nav-item" href="">Menu</li>
-            <li><input class="nav-item form-control mr-sm-2" type="search" placeholder="ZipCode"></li>
-            <li><button class="btn btn-outline-secondary btn-sm" type="submit">Search stores near you</button></li>
-            <li class="nav-item5">Signup</li>
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a class="navbar-brand" href="#">Pizza World</a>
+    <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Order online<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Menu</a>
+            </li>
+            <li>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
+                    <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search stores near you</button>
+                </form>
+            </li>
         </ul>
-    </div>
-    <div class="jumbotron d-sm-none d-md-block">
-        <h1 class="display-4">Welcome to Pizza World!</h1>
 
     </div>
+    <span><i class="fas fa-user mr-sm-2"></i>Login</span>
+</nav>
+<div class="jumbotron d-sm-none d-md-block">
+    <h1 class="display-4">Welcome to Pizza World!</h1>
+</div>
+<main class="container">
     <div class="container-fluid">
         <h2>Build your own pizza!</h2>
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link size" href=""><span class="badge badge-light">1</span>Size and Crust</a>
+                <a class="nav-link active" href=""><span class="badge badge-secondary">1</span>Size and Crust</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link cheese" href=""><span class="badge badge-light">2</span>Cheese and Sauce</a>
+                <a class="nav-link active" href=""><span class="badge badge-secondary">2</span>Cheese and Sauce</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link toppings" href=""><span class="badge badge-light">3</span>Toppings</a>
+                <a class="nav-link active" href=""><span class="badge badge-secondary">3</span>Toppings</a>
             </li>
         </ul>
     </div>
-    <div class="card" style="width: 50rem;">
+    <div class="card" style="width: 69.5rem;">
         <div class="card-header bg-primary">Choose size and crust</div>
-            <div class="card-body">
-            </div>
-            <div class="container-fluid">
+        <div class="card-body">
+        </div>
+        <div class="container-fluid">
 
-                <div class="card" style="width: 45rem">
-                    <div class="card-header hand-tossed">Hand Tossed</div>
-                    <h6>Garlic seasoned crust with a rich, buttery taste</h6>
-                        <div class="radio">
-                            <label><input type="radio" name="small">Small (10")</label><br>
-                            <label><input type="radio" name="medium">Medium (12")</label>
-                        </div>
-                </div>
-                <div class="card" style="width: 45rem;">
-                    <div class="card-header crispy-thin">Crispy Thin</div>
-                    <h6>Thin enough for optimum crispy to crunchy ratio.</h6>
-                        <div class="radio">
-                            <label><input type="radio" name="thin-med">Medium (12")</label><br>
-                            <label><input type="radio" name="thin-lg">Large (14")</label>
-                        </div>
+            <div class="card" style="width: 67rem">
+                <div class="card-header hand-tossed">Hand Tossed</div>
+                <h6>Garlic seasoned crust with a rich, buttery taste</h6>
+                <div class="radio">
+                    <label><input type="radio" name="tossed">Small (10")</label><br>
+                    <label><input type="radio" name="tossed">Medium (12")</label>
                 </div>
             </div>
-        <div class="card footer"><button type="button" class="btn btn-primary btn-sm">Next Step!</button></div>
+            <div class="card my-3" style="width: 67rem;">
+                <div class="card-header crispy-thin">Crispy Thin</div>
+                <h6>Thin enough for optimum crispy to crunchy ratio.</h6>
+                <div class="radio">
+                    <label><input type="radio" name="thin">Medium (12")</label><br>
+                    <label><input type="radio" name="thin">Large (14")</label>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer bg-light text-right">
+            <button type="button" class="btn btn-primary btn-sm">Next Step</button>
+        </div>
     </div>
-    <div class="card" style="width: 50rem;">
+    <div class="card" style="width: 69.5rem;">
         <div class="card-header bg-primary">Choose cheese and sauce</div>
-            <div class="card-body">
-            </div>
-            <div class="container-fluid">
-                <div class="card" style="width: 45rem;">
-                    <div class="card-header cheese">Cheese</div>
-                    <p>How Much?</p>
+        <div class="card-body">
+        </div>
+        <div class="container-fluid">
+            <div class="card" style="width: 67rem;">
+                <div class="card-header cheese">Cheese?</div>
+                <div class="form-group">
+                    <label for="cheese-select">How Much?</label>
+                    <select class="form-control" id="cheese-select">
+                        <option>Light</option>
+                        <option>Normal</option>
+                        <option>Extra</option>
+                        <option>Double</option>
+                    </select>
                 </div>
             </div>
-
-
+            <div class="card my-3" style="width: 67rem;">
+                <div class="card-header sauce">Sauce?</div>
+                <div class="form-group">
+                    <label for="sauce-select">What Type?</label>
+                    <select class="form-control" id="sauce-select">
+                        <option>Tomato sauce</option>
+                        <option>Marinara sauce</option>
+                        <option>BBQ sauce</option>
+                        <option>Alfredo sauce</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="sauce-amt">How Much?</label>
+                    <select class="form-control" id="sauce-amt">
+                        <option>Light</option>
+                        <option>Normal</option>
+                        <option>Extra</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer bg-light text-right">
+        <button type="button" class="btn btn-primary btn-sm">Previous Step</button>
+        <button type="button" class="btn btn-primary btn-sm">Next Step</button>
+    </div>
+    <div class="card" style="width: 69.5rem;">
+        <div class="card-header bg-primary">Choose Toppings</div>
+        <div class="card-body"></div>
+        <div class="container-fluid">
+            <div class="card" style="width: 67rem;">
+                <div class="card-header meats">Choose Meats</div>
+                <div class="radio">
+                    <label><input type="radio" name="beef">Beef</label><br>
+                    <label><input type="radio" name="Ham">Ham</label><br>
+                    <label><input type="radio" name="Philly Steak">Philly Steak</label><br>
+                    <label><input type="radio" name="Bacon">Bacon</label>
+                </div>
+            </div>
+            <div class="card my-3" style="width: 67rem;">
+                <div class="card-header veg">Choose Non-Meats</div>
+                <div class="radio">
+                    <label><input type="radio" name="green">Green Peppers</label><br>
+                    <label><input type="radio" name="mush">Mushrooms</label><br>
+                    <label><input type="radio" name="onion">Onions</label><br>
+                    <label><input type="radio" name="japs">Jalapeno Peppers</label>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer bg-light text-right">
+            <button type="button" class="btn btn-primary btn-sm">Checkout</button>
+        </div>
     </div>
 
-
-
-
+</main>
 </body>
 </html>
