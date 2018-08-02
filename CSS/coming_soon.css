@@ -1,0 +1,22 @@
+body {
+    background-image: url("../img/forest.jpg");
+    background-size: cover;
+}
+
+.coming-soon {
+    font-family: Raleway, sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 70px;
+    font-weight: lighter;
+    top: 50%;
+    position: absolute;
+    margin-top: 15px;
+    left: 12%;
+}
+
+.logo {
+    font-family: Raleway, sans-serif;
+    color: white;
+
+}
