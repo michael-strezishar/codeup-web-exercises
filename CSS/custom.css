@@ -1,0 +1,22 @@
+.nav-item5 {
+    margin-left: auto;
+}
+
+.jumbotron {
+    /*width: 100%;*/
+    background-image: url("../img/pizza.png");
+}
+
+.img {
+    width: 100%;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    background-color: antiquewhite;
+    opacity: 0.7;
+}
+
+/*.size {*/
+    /*background-color: #006cff;*/
