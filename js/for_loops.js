@@ -39,3 +39,6 @@ for (var i = 1; i <= value; i++) {
     }
     console.log(num);
 }
+
+
+
