@@ -71,3 +71,10 @@ numbers.forEach(function(last) {
 
     console.log("Here is the number " + numbers[4] + ".");
     });
+
+// coin flip
+
+    var coinFlip = function(){
+        return (Math.floor(Math.random() * 2) == 0) ? "Heads" : "Tails";
+    }
+    console.log("The coin landed on: " + coinFlip());
