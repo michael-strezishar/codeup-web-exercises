@@ -111,7 +111,7 @@ shoppers.forEach(function(shopper){
     ];
 
 for (var i=0; i < books.length; i++){
-    console.log(books[i]);
+    console.log("The book number is " + (parseInt(i)+1) + " The title is " + (books[i].title) + " The author is " + (books[i].author.firstName) + " " + (books[i].author.lastName));
 }
     /**
      * TODO:
