@@ -1,18 +1,18 @@
-// function fizzBuzz(num) {
-//     for(var i = 1; i <= num; i++) {
-//         if (i % 3 === 0) {
-//             console.log("fizz");
-//         } if (i % 5 === 0) {
-//             console.log("buzz");
-//         } if (i % 15 === 0) {
-//             console.log("fizzbuzz");
-//         } else {
-//             console.log(i);
-//         }
-//     }
-// }
+function fizzBuzz(num) {
+    for(var i = 1; i <= num; i++) {
+        if(i % 10 === 0 && i % 30 ===0){
+            console.log("FizzBuzz");
+        } else if (i % 6 === 0){
+            console.log("Fizz");
+        } else if (i % 8 === 0){
+            console.log("Buzz");
+        } else {
+            console.log(i);
+        }
+    }
+}
 //
-// console.log(fizzBuzz(30));
+console.log(fizzBuzz(100));
 
 // var bugs = ["bee", "fly", "wasp", "dragonfly", "ladybug", "spider"];
 //
@@ -94,3 +94,15 @@ function countRepeating (word){
 console.log(countRepeating("arararaaaa"));
 
 
+function increment(x) {
+    var larry = 6;
+    return x + (1 * larry);
+}
+
+console.log(increment(4));
+
+function shout(message){
+    alert(message.toUpperCase() + "!!!");
+}
+var returnIt = shout("hey man");
+console.log(returnIt);

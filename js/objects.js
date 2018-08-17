@@ -112,9 +112,17 @@ shoppers.forEach(function(shopper){
         }
     ];
 
-for (var i=0; i < books.length; i++){
-    console.log("The book number is " + (parseInt(i)+1) + " The title is " + (books[i].title) + " The author is " + (books[i].author.firstName) + " " + (books[i].author.lastName));
-}
+
+    var bookListing = function(book, id){
+        console.log("Book # " + id);
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+
+    };
+    books.forEach(function(book,id){
+        bookListing(book, id+1);
+    })
+
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -150,5 +158,25 @@ for (var i=0; i < books.length; i++){
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    var createBook = function(title, author){
+        var book = {};
+        book.title = title;
+        if (typeof author === "string"){
+            var names = author.split(" ");
+            var authObj = {
+                firstName: names[0],
+                lastName: names[1]
+            }
+            book.author = authObj;
+        }
+        else if (typeof author === "object"){
+            book.author = author;
+        }
+
+        return book;
+    }
+
+    console.log(createBook("The Right Stuff", "Tom Wolfe" ));
 
 })();
