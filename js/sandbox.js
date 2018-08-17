@@ -72,4 +72,25 @@ var car = {
     make: "Ford",
     model: "GT40",
     year: 1968
+};
+
+function countRepeating (word){
+    var mostRepititions = 0;
+
+    for(var i = 0; i<word.length; i++) {
+        var repititions = 1;
+        for (var j = i+1; j < word.length; j++) {
+            if (i != j && word[i].toLowerCase() === word[j].toLowerCase())
+                repititions++;
+        }
+        }
+        if (repititions > mostRepititions) {
+            mostRepititions = repititions;
+
+        }
+    return mostRepititions;
 }
+
+console.log(countRepeating("arararaaaa"));
+
+

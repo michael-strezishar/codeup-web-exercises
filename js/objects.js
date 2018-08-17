@@ -13,13 +13,15 @@
      */
 var person = {
     firstName: "Michael",
-    lastName: " Strezishar",
-    sayHello: "Hello from "
+    lastName: "Strezishar",
+    sayHello: function () {
+        console.log("Hello from " + this.firstName + " " + this.lastName);
+    }
 
-}
+};
     console.log(person.firstName);
     console.log(person.lastName);
-    console.log(person.sayHello + person.firstName + person.lastName);
+    console.log(person.sayHello());
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
