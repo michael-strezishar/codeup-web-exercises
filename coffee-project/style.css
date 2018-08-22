@@ -1,0 +1,33 @@
+table {
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+.name {
+    font-size: 2em;
+    margin-left: 4em;
+    margin-top: 1em;
+
+}
+
+.roast {
+    float: right;
+    color: lightgrey;
+    margin-right: 9em;
+    margin-bottom: 2px;
+
+}
+
+
+
+
+
+
+
+
+
