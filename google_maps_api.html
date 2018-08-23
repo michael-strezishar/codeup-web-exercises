@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js"
+            type="text/javascript" charset="utf-8"></script>
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js"
+            type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div style="width: 640px; height: 480px" id="mapContainer"></div>
+<script>
+    // Initialize the platform object:
+    var platform = new H.service.Platform({
+        'app_id': 'zthUk6JIMunGP2rlUIWQ ',
+        'app_code': 'N4Ff33iZ2KA5yG9RW3AoGg'
+    });
+
+    // Obtain the default map types from the platform object
+    var maptypes = platform.createDefaultLayers();
+
+    // Instantiate (and display) a map object:
+    var map = new H.Map(
+        document.getElementById('mapContainer'),
+        maptypes.normal.map,
+        {
+            zoom: 10,
+            center: { lng: -98.491142, lat: 29.424349}
+        });
+    var geocodingParams = {
+        searchText: '316 Pat Booker Rd, Universal City, TX',
+    };
+
+    var onResult = function(result){
+        var locations = result.Response.View[0].Result,
+            position,
+            marker;
+        for(i = 0; i < locations.length; i++){
+            position = {
+                lat: locations[i].Location.DisplayPosition.Latitude,
+                lng: locations[i].Location.DisplayPosition.Longitude
+            };
+            marker = new H.map.Marker(position);
+            map.addObject(marker);
+        }
+    };
+    var geocoder = platform.getGeocodingService();
+    geocoder.geocode(geocodingParams, onResult, function(e){
+        alert(e);
+    });
+</script>
+</body>
+</html>
