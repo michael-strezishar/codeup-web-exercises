@@ -6,16 +6,28 @@
 </head>
 <body>
 <h1>JQuery</h1>
-<p>Lorem</p>
+<p>Here is the jQuery exercise page fun to be had</p>
 
+<h2>Some List Items</h2>
+<ul>
+    <li class="codeup" id="fun">Fun</li>
+    <li class="" id="codeup">Excitement</li>
+    <li class="codeup" id="awesome">Awesomeness</li>
+    <li class="items" id="function">Functionality</li>
+</ul>
+<div class="important">
+    <h3>Important News</h3>
+    <p>Here is the important news for the day</p>
+</div>
 
 <script src="js/jquery-2.2.4.js"></script>
 <script>
     "use strict";
-    $(document).ready(function () {
-        alert('The DOM has finished loading');
 
-    });
+    $('li').css('font-size','20px');
+    $('p, h1, li').css('background-color','yellow');
+    var headingalert = $('h1').text();
+    alert(headingalert);
 
 </script>
 
