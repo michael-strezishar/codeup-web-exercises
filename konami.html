@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<style>
+    img {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+
+</style>
+<audio id="contra" src="img/Contra%20SFX%20(26).wav"></audio>
+<audio id="contra2" src="img/Contra%20SFX%20(18).wav"></audio>
+<audio controls src="img/Theme.mp3"></audio>
+<img src="img/Contra_background.gif" alt="">
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+
+
+    function konami(c) {
+        var input = "";
+        var keyCode = "3838404037393739666513";
+        $(document).keydown(function(e) {
+            input += e.keyCode;
+            if (input.indexOf(keyCode) !== -1) {
+                c();
+                input = "";
+            }
+        });
+    }
+    $(document).ready(function(){
+        konami(function(){
+            $('img').slideUp(1000).delay(1000).slideDown(1000);
+            contra.play();
+            $('body').css('background-color', 'black');
+            alert('Cheat Code Activated! You get 99 Lives!!!');
+            contra2.play();
+
+
+
+
+        })
+    });
+
+
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+    });
+
+
+</script>
+</body>
+</html>
