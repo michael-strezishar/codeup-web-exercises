@@ -34,7 +34,15 @@
         display: none;
 
     }
+
+    h2 {
+        display: none;
+    }
 </style>
+<div id="news">
+    <h1>Would you like to sign up for our newsletter?<span> X</span></h1>
+
+</div>
 <h2>America's National Parks FAQ's</h2>
 <hr>
     <dl>
@@ -96,6 +104,7 @@
     <li class="finalLI">Located in Utah</li>
 </ul>
 <button>click here</button>
+<h2>Would you like to register as a frequent user?</h2>
 
     <script src="js/jquery-2.2.4.js"></script>
     <script>
@@ -111,7 +120,7 @@
         $('.hidden').css({
             'display': 'none',
         });
-        $('h2').css('text-align', 'center')
+        $('h2').css('text-align', 'center');
 
         $("button").click(function(event){
             $("ul").each(function(index, element){
@@ -158,6 +167,22 @@
         // });
         $('dl').css('text-align', 'center');
         $('dt').css('font-size', '20px');
+
+        $('span').click(function(event){
+            $('#news').hide();
+        });
+
+        $('ul').hide();
+
+        $('h3').click(function(){
+            $('ul').slideToggle();
+        });
+
+       setTimeout(function(){
+           $('h2').fadeIn(3000);
+           $('h2').show();
+
+       }, 8000);
     </script>
 </body>
 
