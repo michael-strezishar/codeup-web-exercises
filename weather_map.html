@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
+</head>
+<body>
+<h1>Weather Application</h1>
+<h2 id="city"></h2>
+<!--<div class="container">-->
+<!--<div class="row"></div>-->
+    <div class="weather">
+        <div class="forecast" id="weatherbox1">
+        </div>
+        <!--<div class="col-4" id="weatherbox1">-->
+        </div>
+        <!--<div class="col-4" id="weatherbox1">-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<div id="map"></div>
+
+
+<style>
+
+    #weatherbox1 {
+        background-color: #e1e1e1;
+    }
+    body {
+        background-color: #a1dbff;
+    }
+    /*h2 {*/
+        /*background-color: #a1dbff;*/
+    /*}*/
+    #weatherbox1 {
+        display: flex;
+        /*padding-left: 2em;*/
+        /*flex: 1;*/
+        /*border: solid 1px;*/
+        /*text-align: center;*/
+
+
+    }
+    div {
+        flex: 1;
+        border: solid 1px;
+        text-align: center;
+    }
+
+    /*#weatherbox1 {*/
+        /*flex: 1;*/
+        /*border: solid 1px;*/
+        /*text-align: center;*/
+
+    /*}*/
+    #map {
+        width: 100%;
+        height: 400px;
+    }
+
+</style>
+<script src="js/jquery-2.2.4.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcutaMlqTX-bCPTU92piNihqK7doftj9o"></script>
+<!--<script type="text/javascript" src="js/jquery.googlemap.js"></script>-->
+<script>
+    "use strict";
+    var key = localStorage.weatherapikey;
+    var city = "San Antonio, US";
+    var url = "https://api.openweathermap.org/data/2.5/forecast";
+
+    $.ajax({
+        url: url,
+        dataType: "json",
+        type: "GET",
+        data: {
+            q: city,
+            appid: key,
+            units: "imperial",
+            cnt: "3"
+        },
+        success: function(data) {
+            console.log(data);
+            var wf = "";
+            // var wf2 = "";
+            // var wf3 = "";
+
+            // wf += "<div><h2>" + data.city.name + "</h2></div>";
+            $('#city').text(data.city.name);
+            $.each(data.list, function(index, val) {
+                wf += "<div>";
+                // wf += "<b>Day " + index + "</b>: ";
+                wf += "<h2>" + parseInt(val.main.temp_min) +"/"+ parseInt(val.main.temp_max) + "&degF" + "</h2>";
+                wf += "<img src='https://openweathermap.org/img/w/" + val.weather[0].icon + ".png'>";
+                wf += "<h4>" + "Wind: " + val.wind.speed + "</h4>";
+                wf += "<h4>" + "Humidity: " + val.main.humidity + "</h4>";
+                wf += "<h4>" + "Pressure: " + val.main.pressure + "</h4>";
+                wf += "<h4>" + "Rain:" + val.weather[0].description + "</h4>";
+
+
+
+                wf += "</div>"
+
+            });
+            $("#weatherbox1").html(wf);
+            // $("#weatherbox1").html(wf2);
+            // $("#weatherbox1").html(wf3);
+        },
+
+
+
+
+    });
+
+   function initMap(){
+       var myLatlng = new google.maps.LatLng(29.426791, -98.489602);
+
+       var map = new google.maps.Map(
+           document.getElementById("map"), {zoom: 5, center: myLatlng});
+
+   }
+   initMap()
+
+
+
+</script>
+
+</body>
+</html>
