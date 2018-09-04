@@ -61,7 +61,7 @@
                 wap += "<h4>" + "Wind: " + val.wind.speed + "</h4>";
                 wap += "<h4>" + "Humidity: " + val.main.humidity + "</h4>";
                 wap += "<h4>" + "Pressure: " + val.main.pressure + "</h4>";
-                wap += "<h4>" + "Rain:" + val.weather[0].description + "</h4>";
+                wap += "<h4>" + val.weather[0].main + ": " + val.weather[0].description + "</h4>";
                 wap += "</div>"
             });
             $("#weatherbox1").html(wap);
