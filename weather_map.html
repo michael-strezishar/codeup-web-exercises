@@ -7,35 +7,29 @@
 <body>
 <h1>Weather Application</h1>
 <h2 id="city"></h2>
-    <div style="text-align: center;" id="weatherbox1">
-        </div>
+<div style="text-align: center;" id="weatherbox1">
+</div>
 
 <div id="map"></div>
 
 
 <style>
-
     #weatherbox1 {
         background-color: #e1e1e1;
     }
     body {
         background-color: #a1dbff;
     }
-
     #weatherbox1 {
         display: flex;
-
     }
     div {
         flex: 1;
-
     }
-
     #map {
         width: 100%;
         height: 400px;
     }
-
 </style>
 <script src="js/jquery-2.2.4.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -46,7 +40,6 @@
     var key = localStorage.weatherapikey;
     var city = "San Antonio, US";
     var url = "https://api.openweathermap.org/data/2.5/forecast";
-
     $.ajax({
         url: url,
         dataType: "json",
@@ -60,7 +53,6 @@
         success: function(data) {
             console.log(data);
             var wap = "";
-
             $('#city').text(data.city.name);
             $.each(data.list, function(index, val) {
                 wap += "<div style='border: solid 1px;'>";
@@ -70,32 +62,17 @@
                 wap += "<h4>" + "Humidity: " + val.main.humidity + "</h4>";
                 wap += "<h4>" + "Pressure: " + val.main.pressure + "</h4>";
                 wap += "<h4>" + "Rain:" + val.weather[0].description + "</h4>";
-
-
-
                 wap += "</div>"
-
             });
             $("#weatherbox1").html(wap);
-
         },
-
-
-
-
     });
-
-   function initMap(){
-       var myLatlng = new google.maps.LatLng(29.426791, -98.489602);
-
-       var map = new google.maps.Map(
-           document.getElementById("map"), {zoom: 5, center: myLatlng});
-
-   }
-   initMap()
-
-
-
+    function initMap(){
+        var myLatlng = new google.maps.LatLng(29.426791, -98.489602);
+        var map = new google.maps.Map(
+            document.getElementById("map"), {zoom: 5, center: myLatlng});
+    }
+    initMap()
 </script>
 
 </body>
