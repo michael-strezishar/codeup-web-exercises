@@ -1,10 +1,11 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
+    // var html = '<div class="coffee row">';
+    var html = '<div class="col-6">';
     // html += '<div class="id">' + coffee.id + '</div>';
-    html += '<div class="name">' + coffee.name + '</div>';
-    html += '<div class="roast">' + coffee.roast + '</div>';
+    html += '<h1 class="name mb-0">' + coffee.name + '</h1>';
+    html += '<p class="roast text-justify text-secondary">' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
@@ -12,9 +13,11 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
+    html += '<div class="row">'
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
+    html += '</div>'
     return html;
 }
 
@@ -62,9 +65,10 @@ function search(){
 
 
 }
-function addCoffee(){
-    var newRoast = document.getElementById('#roast-add');
-    var newName = document.getElementById('#name-add');
+function addCoffee(e){
+    e.preventDefault();
+    var newRoast = document.getElementById('roast-add');
+    var newName = document.getElementById('name-add');
     var newCoffee = {
         name: newName.value,
         roast: newRoast.value
@@ -96,7 +100,7 @@ var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var searchBar = document.querySelector('#search');
 var addButton = document.querySelector('#submit-add');
-searchBar.addEventListener("input", search());
+searchBar.addEventListener("input", search);
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);

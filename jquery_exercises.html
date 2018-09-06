@@ -19,7 +19,7 @@
     <h3>Important News</h3>
     <p>Here is the important news for the day</p>
 </div>
-
+<h2 id="hello"></h2>
 <script src="js/jquery-2.2.4.js"></script>
 <script>
     "use strict";
@@ -40,6 +40,20 @@
     function(){
         $(this).css('color', 'black');
     });
+
+    $(function(){
+        var id = prompt("Please enter a number ");
+        console.log("Hello");
+        $.ajax("https://swapi.co/api/planets/" + id).done(function(data){
+            console.log(data);
+            $("#hello").text("Welcome to " + data.name + " where the climate is " + data.climate);
+        })
+            .fail(function(){
+                console.log("oops");
+            });
+        console.log("goodbye");
+    });
+
 
 </script>
 

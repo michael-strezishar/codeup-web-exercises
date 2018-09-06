@@ -22,7 +22,7 @@ function twoDice(){
     if (di1 === 1 && di2 === 1){
         status.innerHTML += " SNAKE-EYES!";
     } else if (di1 === di2) {
-        status.innerHTML += "DOUBLE ACTION!! You get a free roll";
+        status.innerHTML += " DOUBLE ACTION You are a pro!";
     } else if (diceTotal === 7){
         status.innerHTML += " CRAPS! You Lose";
     }

@@ -38,12 +38,15 @@
     h2 {
         display: none;
     }
+    body {
+        background-color: papayawhip;
+    }
 </style>
 <div id="news">
     <h1>Would you like to sign up for our newsletter?<span> X</span></h1>
 
 </div>
-<h2>America's National Parks FAQ's</h2>
+<h1>America's National Parks FAQ's</h1>
 <hr>
     <dl>
         <dt class="invisible">Who is the director of the National Park Service?</dt>
@@ -120,7 +123,7 @@
         $('.hidden').css({
             'display': 'none',
         });
-        $('h2').css('text-align', 'center');
+        $('h1').css('text-align', 'center');
 
         $("button").click(function(event){
             $("ul").each(function(index, element){
@@ -174,8 +177,8 @@
 
         $('ul').hide();
 
-        $('h3').click(function(){
-            $('ul').slideToggle();
+        $('h3').dblclick(function(){
+            $('ul').slideToggle(3000);
         });
 
        setTimeout(function(){

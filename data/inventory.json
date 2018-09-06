@@ -37,7 +37,7 @@
             "tool",
             "powered"
         ],
-        "price": 115
+        "price": 110
     }, {
         "title": "Chain Saw",
         "quantity": 10,
@@ -46,7 +46,7 @@
             "gas",
             "outdoor"
         ],
-        "price": 225
+        "price": 228
 }
 
 ]

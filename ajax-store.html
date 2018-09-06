@@ -27,6 +27,9 @@
 <script>
 (function() {
     "use strict";
+
+
+
     // TODO: Create an ajax GET request for /data/inventory.json
     $.ajax({
         url: "data/inventory.json",
@@ -40,10 +43,10 @@
             tr.push("<td>" + data[i].quantity + "</td>");
             tr.push("<td>" + data[i].price + "</td>");
             tr.push("<td>" + data[i].categories + "</td>");
-            tr.push('<tr>');
+            tr.push('</tr>');
 
         }
-        $("#insertProducts").append($(tr.join('')));
+        $("#insertProducts").append($(tr.join(' ')));
         // $.each(data, function(i, element){
         //     $().append(data[i].title)
         //     $("#insertProducts").append(data[i].quantity);
@@ -53,10 +56,10 @@
 
 console.log(data[0].quantity);
     });
-    $("#Refresh").click(function(){
-        location.reload();
-    });
+        $("#Refresh").click(function () {
+            location.reload();
 
+            });
 
 
 

@@ -8,26 +8,29 @@ td, th {
     padding: 5px 10px;
 }
 
-.name {
-    font-size: 2em;
-    margin-left: 4em;
-    margin-top: 1em;
-
-}
-
-.roast {
-    float: right;
-    color: lightgrey;
-    margin-right: 9em;
-    margin-bottom: 2px;
-
+body {
+    background-image: url("coffee-bean-right.jpeg");
+    background-size: cover;
 }
 
 
 
 
+.display-4 {
+    text-shadow: 2px 2px black;
+    margin-right: 1.12em;
+}
 
+#cards {
+    background-color: #c38c68;
+    opacity: .75;
+}
 
+h1 {
+    text-shadow: 2px 2px black;
+}
 
+p {
 
-
+    font-weight: bold;
+}

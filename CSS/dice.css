@@ -7,6 +7,9 @@
     font-size: 1.5em;
     text-align: center;
     border: #999999 1px solid;
+    /*display: block;*/
+    /*margin-right: auto;*/
+    /*margin-left: auto;*/
 
 
 }
@@ -16,7 +19,31 @@ h2 {
 
 }
 
-#larry {
-    position: absolute;
+h1  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+    color: #5db7b1;
 
+}
+ #larry {
+     float: left;
+ }
+  #phyuck {
+
+      size: 2em;
+      position: relative;
+  }
+  #leonard {
+      float: right;
+
+  }
+  #grits {
+      float: right;
+  }
+
+.diceSet {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }
