@@ -22,7 +22,7 @@
 
 const lastPush = username => {
 
-    return fetch('https://api.github.com/users/' + username + '/events', {headers: {'Authorization': 'token d093c2881d261c18ad2f25e2fe96a6d3b00bd891'}})
+    return fetch('https://api.github.com/users/' + username + '/events', {headers: {'Authorization': 'token '}})
         .then(response => response.json())
         .then(e => e.filter(event => event.type === 'PushEvent'))
         .then (event => event[0].created_at.substr(0, 10))
