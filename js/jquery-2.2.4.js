@@ -625,7 +625,7 @@ var i,
 	// http://www.w3.org/TR/CSS21/syndata.html#value-def-identifier
 	identifier = "(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",
 
-	// Attribute selectors: http://www.w3.org/TR/selectors/#attribute-selectors
+	// Attribute selectors.css: http://www.w3.org/TR/selectors/#attribute-selectors
 	attributes = "\\[" + whitespace + "*(" + identifier + ")(?:" + whitespace +
 		// Operator (capture 2)
 		"*([*^$|!~]?=)" + whitespace +
@@ -634,7 +634,7 @@ var i,
 		"*\\]",
 
 	pseudos = ":(" + identifier + ")(?:\\((" +
-		// To reduce the number of selectors needing tokenize in the preFilter, prefer arguments:
+		// To reduce the number of selectors.css needing tokenize in the preFilter, prefer arguments:
 		// 1. quoted (capture 3; capture 4 or capture 5)
 		"('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|" +
 		// 2. simple (capture 6)
@@ -676,7 +676,7 @@ var i,
 
 	rnative = /^[^{]+\{\s*\[native \w/,
 
-	// Easily-parseable/retrievable ID or TAG or CLASS selectors
+	// Easily-parseable/retrievable ID or TAG or CLASS selectors.css
 	rquickExpr = /^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,
 
 	rsibling = /[+~]/,
@@ -843,7 +843,7 @@ function Sizzle( selector, context, results, seed ) {
 					}
 					newSelector = groups.join( "," );
 
-					// Expand context for sibling selectors
+					// Expand context for sibling selectors.css
 					newContext = rsibling.test( selector ) && testContext( context.parentNode ) ||
 						context;
 				}
@@ -1411,7 +1411,7 @@ Sizzle.matchesSelector = function( elem, expr ) {
 		setDocument( elem );
 	}
 
-	// Make sure that attribute selectors are quoted
+	// Make sure that attribute selectors.css are quoted
 	expr = expr.replace( rattributeQuotes, "='$1']" );
 
 	if ( support.matchesSelector && documentIsHTML &&
@@ -5800,7 +5800,7 @@ function curCSS( elem, name, computed ) {
 	ret = computed ? computed.getPropertyValue( name ) || computed[ name ] : undefined;
 
 	// Support: Opera 12.1x only
-	// Fall back to style even without computed
+	// Fall back to style.css even without computed
 	// computed is undefined for elems on document fragments
 	if ( ( ret === "" || ret === undefined ) && !jQuery.contains( elem.ownerDocument, elem ) ) {
 		ret = jQuery.style( elem, name );
@@ -5978,8 +5978,8 @@ function getWidthOrHeight( elem, name, extra ) {
 			return val;
 		}
 
-		// Check for style in case a browser which returns unreliable values
-		// for getComputedStyle silently falls back to the reliable elem.style
+		// Check for style.css in case a browser which returns unreliable values
+		// for getComputedStyle silently falls back to the reliable elem.style.css
 		valueIsBorderBox = isBorderBox &&
 			( support.boxSizingReliable() || val === elem.style[ name ] );
 
@@ -6022,7 +6022,7 @@ function showHide( elements, show ) {
 			}
 
 			// Set elements which have been overridden with display: none
-			// in a stylesheet to whatever the default browser style is
+			// in a stylesheet to whatever the default browser style.css is
 			// for such an element
 			if ( elem.style.display === "" && isHidden( elem ) ) {
 				values[ index ] = dataPriv.access(
@@ -6061,8 +6061,8 @@ function showHide( elements, show ) {
 
 jQuery.extend( {
 
-	// Add in style property hooks for overriding the default
-	// behavior of getting and setting a style property
+	// Add in style.css property hooks for overriding the default
+	// behavior of getting and setting a style.css property
 	cssHooks: {
 		opacity: {
 			get: function( elem, computed ) {
@@ -6099,7 +6099,7 @@ jQuery.extend( {
 		"float": "cssFloat"
 	},
 
-	// Get and set the style property on a DOM Node
+	// Get and set the style.css property on a DOM Node
 	style: function( elem, name, value, extra ) {
 
 		// Don't set styles on text and comment nodes
@@ -6162,7 +6162,7 @@ jQuery.extend( {
 				return ret;
 			}
 
-			// Otherwise just get the value from the style object
+			// Otherwise just get the value from the style.css object
 			return style[ name ];
 		}
 	},
@@ -6208,7 +6208,7 @@ jQuery.each( [ "height", "width" ], function( i, name ) {
 			if ( computed ) {
 
 				// Certain elements can have dimension info if we invisibly show them
-				// but it must have a current display style that would benefit
+				// but it must have a current display style.css that would benefit
 				return rdisplayswap.test( jQuery.css( elem, "display" ) ) &&
 					elem.offsetWidth === 0 ?
 						swap( elem, cssShow, function() {
@@ -6395,7 +6395,7 @@ Tween.propHooks = {
 			var result;
 
 			// Use a property on the element directly when it is not a DOM element,
-			// or when there is no matching style property that exists.
+			// or when there is no matching style.css property that exists.
 			if ( tween.elem.nodeType !== 1 ||
 				tween.elem[ tween.prop ] != null && tween.elem.style[ tween.prop ] == null ) {
 				return tween.elem[ tween.prop ];
@@ -6414,7 +6414,7 @@ Tween.propHooks = {
 
 			// Use step hook for back compat.
 			// Use cssHook if its there.
-			// Use .style if available and use plain properties where available.
+			// Use .style.css if available and use plain properties where available.
 			if ( jQuery.fx.step[ tween.prop ] ) {
 				jQuery.fx.step[ tween.prop ]( tween );
 			} else if ( tween.elem.nodeType === 1 &&

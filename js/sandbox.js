@@ -210,7 +210,7 @@
 //     console.log(animalNames[i]);
 // }
 
-// var dogs = [
+// let dogs = [
 //     {
 //         name: "Lenny",
 //         age: 3,
@@ -221,16 +221,59 @@
 //         name: "Fern",
 //         age: 8,
 //         breed: "Chihuaha",
-//         sex: "female"
+//         sex: "female",
+//         nickname: "Fern-Marie"
 //     },
 //     {
 //         name: "Sam",
 //         age: 10,
 //         breed: "Pitmouth",
-//         sex: "male"
+//         sex: "male",
+//         bark: function (){
+//             console.log("Wooooff");
+//         }
 //     },
+//     {
+//         name: "Ozzy",
+//         age: 9,
+//         breed: "Rat Terrier",
+//         sex: "Male",
+//         nickname: "Razzle"
+//     },
+//     {
+//         name: "Wicket",
+//         age: 11,
+//         breed: "Chow",
+//         sex: "Female"
+//
+//     },
+//     {
+//         name: "Yoda",
+//         age: 5,
+//         breed: "Greyhound",
+//         sex: "Female"
+//
+//     }
 // ];
 //
+// const sum = dogs.reduce((accumulation, current) => {
+//     return accumulation + current.age;
+// }, 0);
+//
+// console.log(sum);
+//
+// const names = dogs.filter((i) => {
+//     return (i.name === "Yoda");
+// });
+//
+// console.log(names);
+//
+// let oldestDog = dogs.reduce((oD, nextDog) => {
+//     if (nextDog.age > oD.age) return nextDog;
+//     else return oD;
+// },{age: 0});
+// console.log(oldestDog);
+
 // function ourFunction(animals) {
 //     for (var i = 0; i < animals.length; i++){
 //         if (animals[i].age >= 3 && animals[i].breed.includes("ua")){
@@ -294,14 +337,63 @@
 //     }
 // }
 
-function factorial (n){
-    if (n == 0){
-       return 1;
-    } else {
-        return factorial(n - 1) * n;
+// function factorial (n){
+//     if (n == 0){
+//        return 1;
+//     } else {
+//         return factorial(n - 1) * n;
+//     }
+// }
+//
+// console.log(factorial(6));
+
+
+// let fizzBuzz = (num) => {
+//     for (var i = 1; i <= num; i++){
+//         console.log((i % 3 === 0 && i % 5 === 0) ?
+//                 "fizzbuzz" : (i % 5 === 0  ?
+//                     "buzz" : (i % 3 === 0 ?
+//                         "fizz" : i)));
+//     }
+// }
+// fizzBuzz(50);
+
+// const fizzBuzz2 = num => {
+//     let i = 1;
+//     while (i < num) {
+//         if ( i % 15 === 0)
+//             console.log("fizzbuzz")
+//         else if (i % 3 === 0)
+//             console.log("fizz")
+//         else if (i % 5 === 0)
+//             console.log("buzz")
+//         else
+//             console.log(i);
+//         i++;
+//     }
+// }
+// fizzBuzz2(100);
+
+// for(let i=0;i<1000;)
+//     console.log(
+//         ( ++i%3 ? ‘’ : ‘fiz’ ) + ( i%5 ? ‘’ : ‘buzz’ ) || i)
+
+
+function getPrimes(max){
+    var sift = [], i, j, primes = [];
+    for (i = 2; i <= max; ++i){
+        if (!sift[i]){
+            primes.push(i);
+            for (j = i << 1; j<=max; j += i){
+                sift[j]= true;
+            }
+        }
     }
+    return primes;
 }
 
-console.log(factorial(6));
+console.log(getPrimes(100));
 
-
+const getFib = n => {
+    let fib = []
+}
